@@ -1,0 +1,225 @@
+World of Balance Server v1.00 is starting...
+> Loading Configuration File...Done!
+> Loading Species...Done!
+> Loading Requests...Done!
+> Loading Experience Table...Done!
+> Loading Worlds...Done!
+All mini games initialized: 2/2 avaiable
+Running server: Cards of the Wild
+Jar: ../WoC_Server/dist/Cards_Server.jar
+Running server: Running Rhino
+Jar: ../Speed_Server/dist/Speed_Server.jar
+> Now accepting connections...
+[Cards of the Wild] Cards of the Wild Server v1.00 is starting...
+[Cards of the Wild] > Loading Configuration File...Done!
+[Running Rhino] World of Balance Server v1.00 is starting...
+[Running Rhino] 
+[Running Rhino] networking.request.RequestGameover
+[Running Rhino] networking.request.RequestOpponentData
+[Running Rhino] networking.request.RequestLookingForOpponent
+[Running Rhino] networking.request.RequestInGameHeartbeat
+[Running Rhino] networking.request.RequestGameState
+[Running Rhino] networking.request.RRRequestPosition
+[Running Rhino] networking.request.RequestRREndSession
+[Running Rhino] Loading Plant Types...
+[Cards of the Wild] > Loading Species...Done!
+[Running Rhino] Unknown column 'hidden' in 'where clause'
+[Running Rhino] Failed to retrieve Plant species.
+[Running Rhino] Loading Animal Types...
+[Running Rhino] Failed to retrieve Animal species.
+[Running Rhino] Resolving Predators...
+[Running Rhino] Resolving Preys...
+[Running Rhino] Now loading list of RunnerSpecies to memory...
+[Running Rhino] Connecting to database...
+[Cards of the Wild] > Loading Requests...Done!
+[Cards of the Wild] > Loading Experience Table...Done!
+[Running Rhino] Successfully connected to database.
+[Running Rhino] Loading RunnerSpecies data from database...
+[Running Rhino] Successfully loaded RunnerSpecies data from database.
+[Running Rhino] Loading predators and prey data from database...
+[Cards of the Wild] > Loading Worlds...Done!
+[Cards of the Wild] > Now accepting connections...
+[Running Rhino] Successfully loaded predators and prey data from database.
+[Running Rhino] Queries finished. Disconnecting from database...
+[Running Rhino] Successfully disconnected from database.
+[Running Rhino] RunnerSpecies list successfully loaded.
+[Running Rhino] Now loading list of RunnerItems to memory...
+[Running Rhino] Connecting to database...
+[Running Rhino] Successfully connected to database.
+[Running Rhino] Loading RunnerItems data from database...
+[Running Rhino] Successfully loaded RunnerItems data from database.
+[Running Rhino] Queries finished. Disconnecting from database...
+[Running Rhino] Successfully disconnected from database.
+[Running Rhino] RunnerItems list successfully loaded.
+[Running Rhino] Server has started on port: 9256
+[Running Rhino] Waiting for clients...
+127.0.0.1 is connecting...
+[Cards of the Wild] 127.0.0.1 is connecting...
+[Running Rhino] 127.0.0.1 is connecting...
+[Running Rhino] User 'hjr' is connecting...
+[Running Rhino] User 'hjr' has successfully logged in.
+[Cards of the Wild] User 'hjr' is connecting...
+User 'hjr' is connecting...
+[Cards of the Wild] Selecting player: 166
+[Cards of the Wild] User 'hjr' has successfully logged in.
+User 'hjr' has successfully logged in.
+[Cards of the Wild] Parse RequestPlayerSelect
+[Cards of the Wild] Selecting player: 166
+The client is requesting for quiting...
+
+
+
+
+World of Balance Server v1.00 is starting...
+> Loading Configuration File...Done!
+> Loading Species...Done!
+> Loading Requests...Done!
+> Loading Experience Table...Done!
+> Loading Worlds...Done!
+All mini games initialized: 2/2 avaiable
+Running server: Cards of the Wild
+Jar: ../WoC_Server/dist/Cards_Server.jar
+Running server: Running Rhino
+Jar: ../Speed_Server/dist/Speed_Server.jar
+> Now accepting connections...
+[Cards of the Wild] Cards of the Wild Server v1.00 is starting...
+[Cards of the Wild] > Loading Configuration File...Done!
+[Running Rhino] World of Balance Server v1.00 is starting...
+[Running Rhino] 
+[Cards of the Wild] Exception in thread "main" java.lang.NullPointerException
+[Cards of the Wild] 	at core.GameServer.main(GameServer.java:233)
+[Running Rhino] networking.request.RequestGameover
+[Running Rhino] networking.request.RequestOpponentData
+[Running Rhino] networking.request.RequestLookingForOpponent
+[Running Rhino] networking.request.RequestInGameHeartbeat
+[Running Rhino] networking.request.RequestGameState
+[Running Rhino] networking.request.RRRequestPosition
+[Running Rhino] networking.request.RequestRREndSession
+[Running Rhino] Loading Plant Types...
+[Running Rhino] Failed to retrieve Plant species.
+[Running Rhino] Unknown column 'hidden' in 'where clause'
+[Running Rhino] Loading Animal Types...
+[Running Rhino] Failed to retrieve Animal species.
+[Running Rhino] Resolving Predators...
+[Running Rhino] Resolving Preys...
+[Running Rhino] Now loading list of RunnerSpecies to memory...
+[Running Rhino] Connecting to database...
+[Running Rhino] Successfully connected to database.
+[Running Rhino] Loading RunnerSpecies data from database...
+[Running Rhino] Successfully loaded RunnerSpecies data from database.
+[Running Rhino] Loading predators and prey data from database...
+[Running Rhino] Successfully loaded predators and prey data from database.
+[Running Rhino] Queries finished. Disconnecting from database...
+[Running Rhino] Successfully disconnected from database.
+[Running Rhino] RunnerSpecies list successfully loaded.
+[Running Rhino] Now loading list of RunnerItems to memory...
+[Running Rhino] Connecting to database...
+[Running Rhino] Successfully connected to database.
+[Running Rhino] Loading RunnerItems data from database...
+[Running Rhino] Successfully loaded RunnerItems data from database.
+[Running Rhino] Queries finished. Disconnecting from database...
+[Running Rhino] Successfully disconnected from database.
+[Running Rhino] RunnerItems list successfully loaded.
+[Running Rhino] Address already in use
+127.0.0.1 is connecting...
+User 'hjr' is connecting...
+User 'hjr' has successfully logged in.
+The client is requesting for quiting...
+> Parsing RequestConvergeNewAttempt, config = 5,[5],2000.0,1.0,1,K=7045.455,0,[14],1751.0,20.0,1,X=0.205,0,[31],1415.0,0.0075,1,X=0.194,0,[42],240.0,0.205,1,X=0.171,0,[70],2494.0,13.0,1,X=0.000,0
+User 'hjr' has submitted a simulation request...
+netId:f34adc8c-1d91-450f-93a0-40e6bac41c53
+Total Time (Run): 0.39 seconds
+manpId:a3979789-8c8c-4b8a-91e6-546afe9c4c2f
+Total Time (Create and Run Serengeti Sub-Food Web): 3.04 seconds
+Increasing  [70] African Clawless Otter 2.494
+In createMultipleSpeciesTypeManip: node [70], biomass 2494, K = -1, R = -1.0000, X = 0.0000
+Increasing  [5] Grass and Herbs 2.0
+In createMultipleSpeciesTypeManip: node [5], biomass 2000, K = 7045, R = 1.0000, X = 0.5000
+Increasing  [42] African Grey Hornbill 0.24
+In createMultipleSpeciesTypeManip: node [42], biomass 240, K = -1, R = -1.0000, X = 0.1710
+Increasing  [31] Tree Mouse 1.415
+In createMultipleSpeciesTypeManip: node [31], biomass 1415, K = -1, R = -1.0000, X = 0.1940
+Increasing  [14] Crickets 1.751
+In createMultipleSpeciesTypeManip: node [14], biomass 1751, K = -1, R = -1.0000, X = 0.2050
+Total Time (submitManipRequest): 0.86 seconds
+Total Time (Run): 2.97 seconds
+manpId:a3979789-8c8c-4b8a-91e6-546afe9c4c2f
+Inserting estimated biomass, node = 70, timestep = 199
+Saved CSV to: src/log/WoB_Data_1.csv
+Simulation Job , created job ID: 2319
+Deleted net ID: 704c7de0-bf1d-4749-8427-4e7737f935e4
+> Parsing RequestConvergeNewAttempt, config = 5,[5],2000.0,1.0,1,K=11181.820,0,[14],1751.0,20.0,1,X=0.410,0,[31],1415.0,0.0075,1,X=0.410,0,[42],240.0,0.205,1,X=0.410,0,[70],2494.0,13.0,1,X=0.057,0
+User 'hjr' has submitted a simulation request...
+netId:f1237cc8-8baa-49c3-8dbd-c20abdb90844
+Total Time (Run): 0.51 seconds
+manpId:f92201ad-e3a7-45d7-9cec-44f4cfd528dd
+Total Time (Create and Run Serengeti Sub-Food Web): 1.33 seconds
+Increasing  [70] African Clawless Otter 2.494
+In createMultipleSpeciesTypeManip: node [70], biomass 2494, K = -1, R = -1.0000, X = 0.0570
+Increasing  [5] Grass and Herbs 2.0
+In createMultipleSpeciesTypeManip: node [5], biomass 2000, K = 11181, R = 1.0000, X = 0.5000
+Increasing  [42] African Grey Hornbill 0.24
+In createMultipleSpeciesTypeManip: node [42], biomass 240, K = -1, R = -1.0000, X = 0.4100
+Increasing  [31] Tree Mouse 1.415
+In createMultipleSpeciesTypeManip: node [31], biomass 1415, K = -1, R = -1.0000, X = 0.4100
+Increasing  [14] Crickets 1.751
+In createMultipleSpeciesTypeManip: node [14], biomass 1751, K = -1, R = -1.0000, X = 0.4100
+Total Time (submitManipRequest): 0.71 seconds
+Total Time (Run): 2.56 seconds
+manpId:f92201ad-e3a7-45d7-9cec-44f4cfd528dd
+Inserting estimated biomass, node = 70, timestep = 199
+Saved CSV to: src/log/WoB_Data_2.csv
+Simulation Job , created job ID: 2320
+Deleted net ID: 04712f63-0470-441a-a1b8-75c2ab1c6cef
+> Parsing RequestConvergeNewAttempt, config = 5,[5],2000.0,1.0,1,K=7204.546,0,[14],1751.0,20.0,1,X=0.273,0,[31],1415.0,0.0075,1,X=0.228,0,[42],240.0,0.205,1,X=0.205,0,[70],2494.0,13.0,1,X=0.057,0
+User 'hjr' has submitted a simulation request...
+netId:b6249f78-26ae-40ab-ac9f-9a0175c6d0f2
+Total Time (Run): 0.51 seconds
+manpId:c9afa410-3799-401c-9656-c42a7ca9b120
+Total Time (Create and Run Serengeti Sub-Food Web): 1.19 seconds
+Increasing  [70] African Clawless Otter 2.494
+In createMultipleSpeciesTypeManip: node [70], biomass 2494, K = -1, R = -1.0000, X = 0.0570
+Increasing  [5] Grass and Herbs 2.0
+In createMultipleSpeciesTypeManip: node [5], biomass 2000, K = 7204, R = 1.0000, X = 0.5000
+Increasing  [42] African Grey Hornbill 0.24
+In createMultipleSpeciesTypeManip: node [42], biomass 240, K = -1, R = -1.0000, X = 0.2050
+Increasing  [31] Tree Mouse 1.415
+In createMultipleSpeciesTypeManip: node [31], biomass 1415, K = -1, R = -1.0000, X = 0.2280
+Increasing  [14] Crickets 1.751
+In createMultipleSpeciesTypeManip: node [14], biomass 1751, K = -1, R = -1.0000, X = 0.2730
+Total Time (submitManipRequest): 0.82 seconds
+Total Time (Run): 2.87 seconds
+manpId:c9afa410-3799-401c-9656-c42a7ca9b120
+Inserting estimated biomass, node = 70, timestep = 199
+Saved CSV to: src/log/WoB_Data_3.csv
+Simulation Job , created job ID: 2321
+Deleted net ID: 07af01bd-7d9b-4930-8b0f-1592251342f3
+> Parsing RequestConvergeNewAttempt, config = 5,[5],2000.0,1.0,1,K=7204.546,0,[14],1751.0,20.0,1,X=0.273,0,[31],1415.0,0.0075,1,X=0.614,0,[42],240.0,0.205,1,X=0.205,0,[70],2494.0,13.0,1,X=0.057,0
+User 'hjr' has submitted a simulation request...
+netId:a6477862-05a9-4b0f-8dfc-582eddb3bde3
+Total Time (Run): 0.44 seconds
+manpId:ee22ba28-acf7-4260-ba52-6268a700ddb4
+Total Time (Create and Run Serengeti Sub-Food Web): 0.83 seconds
+Increasing  [70] African Clawless Otter 2.494
+In createMultipleSpeciesTypeManip: node [70], biomass 2494, K = -1, R = -1.0000, X = 0.0570
+Increasing  [5] Grass and Herbs 2.0
+In createMultipleSpeciesTypeManip: node [5], biomass 2000, K = 7204, R = 1.0000, X = 0.5000
+Increasing  [42] African Grey Hornbill 0.24
+In createMultipleSpeciesTypeManip: node [42], biomass 240, K = -1, R = -1.0000, X = 0.2050
+Increasing  [31] Tree Mouse 1.415
+In createMultipleSpeciesTypeManip: node [31], biomass 1415, K = -1, R = -1.0000, X = 0.6140
+Increasing  [14] Crickets 1.751
+In createMultipleSpeciesTypeManip: node [14], biomass 1751, K = -1, R = -1.0000, X = 0.2730
+Total Time (submitManipRequest): 0.72 seconds
+Total Time (Run): 2.86 seconds
+manpId:ee22ba28-acf7-4260-ba52-6268a700ddb4
+Inserting estimated biomass, node = 70, timestep = 199
+Saved CSV to: src/log/WoB_Data_4.csv
+Simulation Job , created job ID: 2322
+Deleted net ID: dba4a173-b196-4108-be78-e34d9b136d55
+The client is requesting for quiting...
+!!!!!!!!!!!!1441403007001 - 1441402671202
+Client is not alive, kick him out.
+Number of rooms: 0
+User 'hjr' has logged off.
+Client 256705bb-6319-4b98-b83e-bfb3642a36b9 has ended
