@@ -66,4 +66,7 @@ public class NodeTimesteps {
         return Math.sqrt (score / (double) biomass.length);
     }
 
+    public double[] getBiomassArray(){
+    	return biomass;
+    }
 }

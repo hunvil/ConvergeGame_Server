@@ -31,10 +31,10 @@ public class SimJobConverge {
 
         GameServer.getInstance();  //load species information
         /* read in experimental variables only used for running simulation jobs*/
-        if (SimJob.DFLT_USE_SIMTESTNODE_VALS) {
+        //if (SimJob.DFLT_USE_SIMTESTNODE_VALS) {
             SpeciesType.loadSimTestNodeParams(Constants.ECOSYSTEM_TYPE);
             SpeciesType.loadSimTestLinkParams(Constants.ECOSYSTEM_TYPE); 
-        }
+        //}
 
 
         jobMgr = new SimJobManager();

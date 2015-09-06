@@ -3,10 +3,9 @@
 /core
 /db
 /lobby
-/log
 /metadata
 /model
 /net
 /org
+/atn
 /simulation
-/util

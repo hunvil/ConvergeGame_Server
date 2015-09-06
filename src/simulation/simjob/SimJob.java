@@ -98,7 +98,7 @@ public class SimJob {
 
         //10/28/14, jtc, revised method to acquire new dfltK/R/X field value
         //prev was just using static defaults entered above - inaccurate.
-        double getDfltValue(SpeciesZoneType szt) throws NoSuchFieldException, 
+        double getDfltValue(SimJobSZT szt) throws NoSuchFieldException, 
                 IllegalArgumentException, IllegalAccessException {
             double dflt;
             if (ptype == ParamType.NODE) {
@@ -124,7 +124,7 @@ public class SimJob {
         }
 
         //see if actual value equals default value - NODE
-        boolean equalsDefault(SpeciesZoneType sjSzt)
+        boolean equalsDefault(SimJobSZT sjSzt)
                 throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException {
             double actualVal = getActualValue(sjSzt);
             if (actualVal == Constants.PARAM_INITVALUE) {
@@ -133,7 +133,7 @@ public class SimJob {
             return (double) getActualValue(sjSzt) == this.getDfltValue(sjSzt);
         }
 
-        double getActualValue(SpeciesZoneType sjSzt)
+        double getActualValue(SimJobSZT sjSzt)
                 throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException {
             if (this.ptype != ParamType.NODE) {
                 return 0.0;  //only used for node parameters
@@ -289,7 +289,7 @@ public class SimJob {
     protected void parseNodeConfig() {
         //reset species list
         speciesZoneList = new ArrayList<SpeciesZoneType>();
-        SpeciesZoneType sjSzt = null;
+        SimJobSZT sjSzt = null;
         String remainder = node_Config, paramID;
         int nodeCnt = 0, paramCnt, nextNode_Id;
         double biomass, perUnitBiomass, value;
@@ -310,7 +310,7 @@ public class SimJob {
             perUnitBiomass = Double.valueOf(remainder.substring(0, endIndex(remainder, ",")));
             remainder = trim(remainder, ",");
             //create entry in szt list
-            sjSzt = new SpeciesZoneType("", nextNode_Id, 0, perUnitBiomass, biomass, null);
+            sjSzt = new SimJobSZT("", nextNode_Id, 0, perUnitBiomass, biomass, null, useSimTestNodeVals);
             speciesZoneList.add(sjSzt);
 
             if (remainder.isEmpty()) {
@@ -339,7 +339,7 @@ public class SimJob {
         }
     }
 
-    protected String parseLinkParams(String remainder, SpeciesZoneType sjSzt) {
+    protected String parseLinkParams(String remainder, SimJobSZT sjSzt) {
         String paramID;
         int linkParamCnt = 0, prey_Id;
         double value;
@@ -397,7 +397,7 @@ public class SimJob {
     /* 4/21/14, JTC, added per species biomass */
     public String buildNodeConfig() throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException {
         String configStr;
-        SpeciesZoneType sjSzt;
+        SimJobSZT sjSzt;
         int paramCnt;
 
         //sequence is nodeCnt,[node0],biomass0,per-unit-biomass0,paramCnt0,(if any)paramID0,value0,paramID1,value1,...
@@ -406,7 +406,7 @@ public class SimJob {
         //sort for easier (human) review of configuration
         Collections.sort(speciesZoneList, new SZTComparator());
         for (SpeciesZoneType szt : speciesZoneList) {
-            sjSzt = szt;
+        	sjSzt = (SimJobSZT) szt;
             //"[node_Id],biomass,"
             configStr = configStr.concat(String.format("[%d],", sjSzt.getNodeIndex()));
 
@@ -449,7 +449,7 @@ public class SimJob {
         return (node_Config = configStr.substring(0, configStr.length() - 1));
     }
 
-    protected String buildLinkParams(SpeciesZoneType sjSzt)
+    protected String buildLinkParams(SimJobSZT sjSzt)
             throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException {
         String paramStr;
         int paramCnt = 0, paramNum;

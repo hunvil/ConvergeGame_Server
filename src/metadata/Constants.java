@@ -138,4 +138,7 @@ public class Constants {
     //for use in SimJob
     public static final int STATUS_SUCCESS = 0;
     public static final int STATUS_FAILURE = 1;
+    
+    public static final double INIT_BSI_STEPSIZE = 0.1;
+    public static final double MAX_BSI_ERR = 0.5;
 }
