@@ -28,6 +28,7 @@ public class RequestConvergePriorAttempt extends GameRequest {
         playerId = DataReader.readInt(dataInput);
         ecosystemId = DataReader.readInt(dataInput);
         attemptIdOffset = DataReader.readInt(dataInput);
+        Log.consoleln("Parsing RequestConvergePriorAttempt");
     }
 
     @Override
@@ -38,6 +39,6 @@ public class RequestConvergePriorAttempt extends GameRequest {
                     ConvergeAttemptDAO.getNextConvergeAttempt(
                     playerId, ecosystemId, attemptIdOffset));
         client.add(response);
-        //Log.consoleln("Processed RequestConvergePriorAttempt");
+        Log.consoleln("Processed RequestConvergePriorAttempt");
     }
 }

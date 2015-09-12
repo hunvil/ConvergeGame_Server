@@ -58,7 +58,7 @@ public final class ConvergeHintDAO {
     //get count of converge hints in table 
     public static int getConvergeHintCount() {
         int hintCount = 0;
-
+        //HJR - SELECT COUNT(*) FROM `converge_hint` 
         String query = ""
                 + "SELECT * FROM `converge_hint` "
                 + "WHERE 1";

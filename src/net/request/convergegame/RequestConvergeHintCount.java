@@ -20,6 +20,7 @@ public class RequestConvergeHintCount extends GameRequest {
     
     @Override
     public void parse(DataInputStream dataInput) throws IOException {
+    	Log.consoleln("Parsing RequestConvergeHintCount");
     }
 
     @Override
@@ -28,6 +29,6 @@ public class RequestConvergeHintCount extends GameRequest {
         response.setCount(ConvergeHintDAO.getConvergeHintCount());
 
         client.add(response);
-        //Log.consoleln("Processed RequestConvergeHintCount");
+        Log.consoleln("Processed RequestConvergeHintCount");
     }
 }

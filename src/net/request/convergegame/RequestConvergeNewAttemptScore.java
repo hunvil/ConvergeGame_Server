@@ -6,11 +6,14 @@
 package net.request.convergegame;
 
 import db.ConvergeAttemptDAO;
+
 import java.io.DataInputStream;
 import java.io.IOException;
+
 import net.request.GameRequest;
 import net.response.convergegame.ResponseConvergeNewAttemptScore;
 import util.DataReader;
+import util.Log;
 
 /**
  *
@@ -29,6 +32,7 @@ public class RequestConvergeNewAttemptScore extends GameRequest {
         ecosystemId = DataReader.readInt(dataInput);
         attemptId = DataReader.readInt(dataInput);
         score = DataReader.readInt(dataInput);
+        Log.consoleln("Parsing RequestConvergeNewAttemptScore"); 
     }
 
     @Override
@@ -39,5 +43,6 @@ public class RequestConvergeNewAttemptScore extends GameRequest {
                         playerId, ecosystemId, attemptId, score));
 
         client.add(response);
+        Log.consoleln("Processing RequestConvergeNewAttemptScore"); 
     }
 }

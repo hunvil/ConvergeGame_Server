@@ -6,13 +6,11 @@
 package simulation.simjob;
 
 import core.GameServer;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import metadata.Constants;
 import model.SpeciesType;
-import simulation.SimulationException;
 import util.CSVParser;
 
 /**
@@ -31,10 +29,10 @@ public class SimJobConverge {
 
         GameServer.getInstance();  //load species information
         /* read in experimental variables only used for running simulation jobs*/
-        //if (SimJob.DFLT_USE_SIMTESTNODE_VALS) {
+        if (SimJob.DFLT_USE_SIMTESTNODE_VALS) {
             SpeciesType.loadSimTestNodeParams(Constants.ECOSYSTEM_TYPE);
             SpeciesType.loadSimTestLinkParams(Constants.ECOSYSTEM_TYPE); 
-        //}
+        }
 
 
         jobMgr = new SimJobManager();

@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 package atn;
-
+import java.util.Properties;
 /**
  *
  * @author justinacotter
  */
 public final class LinkParams {
-    
+        private Properties propertiesConfig;
         private double paramA;
         private double paramB0;
         private double paramD;
@@ -19,7 +19,8 @@ public final class LinkParams {
         private double paramQ;
         private double paramY;
         
-        public LinkParams() {
+        public LinkParams(Properties propertiesConfig) {
+        	this.propertiesConfig = propertiesConfig;
             resetParamA();
             resetParamB0();
             resetParamD();
@@ -86,38 +87,38 @@ public final class LinkParams {
         }
 
         public void resetParamA () {
-            paramA = Double.valueOf(ATN.propertiesConfig.
+            paramA = Double.valueOf(propertiesConfig.
                 getProperty("relativeHalfSaturationDensityDefault"));
         }
 
         public void resetParamB0 () {
-            paramB0 = Double.valueOf(ATN.propertiesConfig.
+            paramB0 = Double.valueOf(propertiesConfig.
                 getProperty("halfSaturationDensityDefault"));
         }
 
         public void resetParamD () {
-            paramD = Double.valueOf(ATN.propertiesConfig.
+            paramD = Double.valueOf(propertiesConfig.
                 getProperty("predatorInterferenceDefault"));
         }
 
         public void resetParamEPlant () {
-            paramEPlant = Double.valueOf(ATN.propertiesConfig.
+            paramEPlant = Double.valueOf(propertiesConfig.
                 getProperty("assimilationEfficiencyPlantDefault"));
         }
 
         public void resetParamEAnimal () {
-            paramEAnimal = Double.valueOf(ATN.propertiesConfig.
+            paramEAnimal = Double.valueOf(propertiesConfig.
                 getProperty("assimilationEfficiencyAnimalDefault"));
         }
 
         public void resetParamQ () {
-            paramQ = Double.valueOf(ATN.propertiesConfig.
+            paramQ = Double.valueOf(propertiesConfig.
                 getProperty("functionalResponseControlParameterDefault"));
         }
 
         public void resetParamY () {
             paramY = Double.valueOf(
-                ATN.propertiesConfig.
+                propertiesConfig.
                 getProperty("maximumIngestionRateDefault"));
         }
 

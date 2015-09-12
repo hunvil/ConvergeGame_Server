@@ -4,13 +4,18 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.UUID;
 import java.sql.SQLException;
 
+import atn.ATN;
+import atn.ATNEngine;
 import metadata.Constants;
+import db.ManipulationIdDAO;
 import db.SimJobDAO;
 import simulation.SimulationEngine;
 import simulation.SimulationException;
 import simulation.SimulationIds;
+import util.Log;
 
 /**
  * SimJobManager manages and submits simulation jobs to the simulation engine.
@@ -24,6 +29,7 @@ public final class SimJobManager {
     private SimJob job;
     private String manipId;
     private int status = Constants.STATUS_FAILURE;
+	private ATNEngine atnEngine;
     
     public SimJobManager() {
         job = null;
@@ -32,6 +38,7 @@ public final class SimJobManager {
 
     public SimulationEngine newSimEngine() {
         this.simEngine = new SimulationEngine();
+        this.atnEngine = new ATNEngine();
         return this.simEngine;
     }
 
@@ -62,11 +69,12 @@ public final class SimJobManager {
         this.status = status;
     }
 
-    public int runSimJob() throws SQLException, SimulationException {
+	public int runSimJob() throws SQLException, SimulationException {
 
         //create string representation of node configuration settings
         try {
-            job.buildNodeConfig();
+             String nodeConfig = job.buildNodeConfig();
+             Log.consoleln("SimJobManager.runSimJob nodeConfig= " + nodeConfig);
         } catch (Exception ex) {
             Logger.getLogger(SimJobManager.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -82,10 +90,16 @@ public final class SimJobManager {
             int[] nodeListArray = job.getSpeciesNodeList();
             String descript = job.getJob_Descript();
             descript = descript.substring(0, Math.min(descript.length(),50));
+            
             SimulationIds simIds = simEngine.createAndRunSeregenttiSubFoodwebForSimJob(nodeListArray, 
                     descript, 0, 0, true);
             manipId = simIds.getManipId();
             netId = simIds.getNetId();
+            
+            String atnManipId = UUID.randomUUID().toString();
+            atnEngine.setATNManipulationId(atnManipId);
+            atnEngine.setSimJob(job);
+            //ManipulationIdDAO.createManipulationId(manipId, atnManipId);
 
             /*run timestep #1 (executeManipulationRequest); initializes all node and link parameters 
              that can affect manipulation*/
@@ -107,6 +121,8 @@ public final class SimJobManager {
                 Constants.ECOSYSTEM_TYPE);
             PathTable pathTable = new PathTable(consumeMap, 
                     job.getSpeciesNodeList(), !PathTable.PP_ONLY);
+            Log.consoleln("consumeMap " + consumeMap.toString());
+            Log.consoleln("pathTable " + pathTable.toString());
             job.setCsv("Manipulation_id: " + manipId + "\n\n"
                     + simEngine.getBiomassCSVString(manipId) + "\n\n" 
                     + consumeMap.toString() + "\n\n"

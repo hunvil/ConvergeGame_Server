@@ -24,6 +24,7 @@ public class RequestConvergeHint extends GameRequest {
     @Override
     public void parse(DataInputStream dataInput) throws IOException {
         hintIdOffset = DataReader.readInt(dataInput);
+    	Log.consoleln("Parsing RequestConvergeHint hintIdOffset" + hintIdOffset);
     }
 
     @Override
@@ -32,6 +33,6 @@ public class RequestConvergeHint extends GameRequest {
         response.setConvergeHint(
                     ConvergeHintDAO.getNextConvergeHint(hintIdOffset));
         client.add(response);
-        //Log.consoleln("Processed RequestConvergeHint");
+        Log.consoleln("Processed RequestConvergeHint");
     }
 }

@@ -27,6 +27,7 @@ public class RequestConvergePriorAttemptCount extends GameRequest {
     public void parse(DataInputStream dataInput) throws IOException {
         playerId = DataReader.readInt(dataInput);
         ecosystemId = DataReader.readInt(dataInput);
+        Log.consoleln("Parsing RequestConvergePriorAttemptCount");
     }
 
     @Override
@@ -36,14 +37,16 @@ public class RequestConvergePriorAttemptCount extends GameRequest {
         //if ecosystem not specified, return most recent ecosystem's first attempt
         //for this player
         if (ecosystemId == Constants.ID_NOT_SET) {
+        	Log.consoleln("Call getMostRecentConvergeAttemptCount");
             response.setConvergePriorAttemptInfo(
                     ConvergeAttemptDAO.getMostRecentConvergeAttemptCount(playerId));
         } else {
+        	Log.consoleln("Call getConvergeAttemptCount");
             response.setCount(
                     ConvergeAttemptDAO.getConvergeAttemptCount(
                     playerId, ecosystemId));
         }
         client.add(response);
-        //Log.consoleln("Processed RequestConvergePriorAttemptCount");
+        Log.consoleln("Processed RequestConvergePriorAttemptCount");
     }
 }

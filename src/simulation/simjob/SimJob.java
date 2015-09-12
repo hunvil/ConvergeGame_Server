@@ -7,6 +7,7 @@ package simulation.simjob;
 
 import db.SimJobDAO;
 import static java.lang.Math.ceil;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,9 +15,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import metadata.Constants;
 import simulation.ParamValue;
 import simulation.SpeciesZoneType;
+import util.Log;
 
 /**
  * SimJob is class that is used to manage a single simulation job. It is closely
@@ -60,7 +63,7 @@ public class SimJob {
 
     public static final int DFLT_TIMESTEPS = 200;
     public static final int NO_ID = -1;
-    public static final boolean DFLT_USE_SIMTESTNODE_VALS = false;
+    public static final boolean DFLT_USE_SIMTESTNODE_VALS = true;
 
     enum ParamType {
 
@@ -218,6 +221,8 @@ public class SimJob {
 
     public void setCsv(String csv) {
         this.csv = csv;
+        String str = String.format("csv for %d %s", job_Id, csv);
+        Log.consoleln(str);
     }
 
     public void setInclude(boolean incl) {

@@ -72,5 +72,6 @@ public class RequestConvergeNewAttempt extends GameRequest {
         }
 
         client.add(response);
+        Log.consoleln("Processing RequestConvergeNewAttempt"); 
     }
 }

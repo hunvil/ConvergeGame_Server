@@ -19,15 +19,19 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 //WOB_Server imports
 import db.SimJobDAO;
 import metadata.Constants;
 import simulation.simjob.SimJob;
 import model.SpeciesType;
 import core.GameServer;
+
 import java.util.HashMap;
 import java.util.Map;
+
 import javax.swing.JFrame;
+
 import simulation.simjob.EcosystemTimesteps;
 import simulation.simjob.NodeTimesteps;
 import simulation.simjob.SimJobSZT;
@@ -53,6 +57,7 @@ public class ATN {
     private static int equationSet = 0;  //0=ATN; 1=ODE 1; 2=ODE 2
     private double initTime = 0.0;
     private double initVal = 0.0;  //for non-ATN test
+	private String atnManipulationId;
 
     public ATN() {
         //load properties file containing ATN model parameter values
@@ -88,7 +93,7 @@ public class ATN {
         //read in link parameters; this was explicitly configured to allow
         //manipulation of link parameter values, but no manipulation is 
         //performed in this version
-        LinkParams lPs = new LinkParams();
+        LinkParams lPs = new LinkParams(propertiesConfig);
 
         //loop through node values and assemble summary data
         int[] speciesID = new int[speciesCnt];
@@ -385,5 +390,9 @@ public class ATN {
 
         System.out.println("Processing complete.");
 
-    }  
+    }
+
+	public Properties getPropertiesConfig() {
+		return this.propertiesConfig;
+	}  
 }

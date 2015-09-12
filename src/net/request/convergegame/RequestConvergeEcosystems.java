@@ -23,11 +23,12 @@ public class RequestConvergeEcosystems extends GameRequest {
 
     @Override
     public void parse(DataInputStream dataInput) throws IOException {
+    	Log.consoleln("Parsing RequestConvergeEcosystems");
     }
 
     @Override
     public void process() throws Exception {
-        //Log.consoleln("Processing RequestConvergeEcosystems");
+        Log.consoleln("Processing RequestConvergeEcosystems");
         ResponseConvergeEcosystems response = new ResponseConvergeEcosystems();
         response.setConvergeEcosystems(ConvergeEcosystemDAO.getConvergeEcosystems());
 //        client.add(response);
